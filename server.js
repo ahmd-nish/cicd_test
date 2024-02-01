@@ -28,6 +28,12 @@ app.use("/api/products", (req, res) => {
   })
 });
 
+app.use("/api/home", (req, res) => {
+  return res.status(200).json({
+    message: 'This is a feature change from my mac to test CI/CD, a new route for products'
+  })
+});
+
 app.use(errorHandler);
 
 const server = app.listen(port, () =>
